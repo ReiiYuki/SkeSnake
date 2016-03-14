@@ -62,7 +62,7 @@ public class GameActivity extends AppCompatActivity {
         turn = 0;
         p1Position = 0;
         p2Position = 0;
-        boardSize = 6;
+        boardSize = 3;
         boardView.setBoardSize(boardSize);
         boardView.setP1Position(p1Position);
         boardView.setP2Position(p2Position);
