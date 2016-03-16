@@ -53,8 +53,7 @@ public class GameActivity extends AppCompatActivity {
         buttonRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                game.reset();
-                boardView.setBoard(game.getBoard());
+                resetGame();
             }
         });
         textPlayerTurn = (TextView) findViewById(R.id.text_player_turn);
@@ -62,6 +61,7 @@ public class GameActivity extends AppCompatActivity {
 
     private void resetGame() {
         game.reset();
+        refresh();
     }
 
     private void takeTurn() {
@@ -75,8 +75,8 @@ public class GameActivity extends AppCompatActivity {
                 checkWin();
             }
         };
-        displayDialog("Take Turn!",msg, listener);
-        boardView.setBoard(game.getBoard());
+        refresh();
+        displayDialog("Take Turn!", msg, listener);
     }
 
     private void checkWin() {
@@ -107,4 +107,7 @@ public class GameActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    private void refresh(){
+        boardView.setBoard(game.getBoard());
+    }
 }

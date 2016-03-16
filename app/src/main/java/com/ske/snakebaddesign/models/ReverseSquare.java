@@ -7,7 +7,7 @@ import android.graphics.Color;
  */
 public class ReverseSquare extends Square{
     public ReverseSquare(){
-        super(Color.parseColor("#3CE194"));
+        super(Color.parseColor("#62c4ff"));
     }
     @Override
     public int effect(int position) {
